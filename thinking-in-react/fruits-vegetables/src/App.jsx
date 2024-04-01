@@ -65,9 +65,11 @@ function SearchBar() {
       <form>
           <input type="text" placeholder="Search..." />
           <label>
-              <input type="checkbox" />
-              {' '}
-              Only show products in stock
+              <p>
+                <input type="checkbox" />
+                {' '}
+                Only show products in stock
+              </p>
           </label>
       </form>
   );
