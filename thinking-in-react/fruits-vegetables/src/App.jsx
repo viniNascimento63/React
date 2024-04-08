@@ -84,15 +84,15 @@ function SearchBar({
     onInStockOnlyChange
 }) {
     return (
-        <form>
-            <input
-                type="text"
-                value={filterText}
-                placeholder="Search..."
-                onChange={(e) => { onFilterTextChange(e.target.value) }}
-            />
-            <label>
-                <p>
+        <div className="">
+            <form>
+                <input
+                    type="text"
+                    value={filterText}
+                    placeholder="Search..."
+                    onChange={(e) => { onFilterTextChange(e.target.value) }}
+                />
+                <label>
                     <input
                         type="checkbox"
                         checked={inStockOnly}
@@ -100,9 +100,9 @@ function SearchBar({
                     />
                     {' '}
                     Only show products in stock
-                </p>
-            </label>
-        </form>
+                </label>
+            </form>
+        </div>
     );
 }
 
@@ -110,14 +110,16 @@ function FilterProductTable({ products }) {
     const [filterText, setFilterText] = useState('');
     const [inStockOnly, setInStockOnly] = useState(false);
     return (
-        <div>
-            <SearchBar
-                filterText={filterText}
-                inStockOnly={inStockOnly}
-                onFilterTextChange={setFilterText}
-                onInStockOnlyChange={setInStockOnly}
-            />
-            <ProductTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
+        <div className="container d-flex justify-content-center">
+            <div className="grid">
+                <SearchBar
+                    filterText={filterText}
+                    inStockOnly={inStockOnly}
+                    onFilterTextChange={setFilterText}
+                    onInStockOnlyChange={setInStockOnly}
+                />
+                <ProductTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
+            </div>
         </div>
     );
 }
