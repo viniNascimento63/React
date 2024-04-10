@@ -64,16 +64,17 @@ function ProductTable({ products, filterText, inStockOnly }) {
     });
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-
-            <tbody>{rows}</tbody>
-        </table>
+        <div className="container">
+            <table className="w-100">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+            </table>
+        </div>
     );
 }
 
@@ -84,34 +85,33 @@ function SearchBar({
     onInStockOnlyChange
 }) {
     return (
-        <div className="">
-            <form>
+        <form>
+            <input
+                type="text"
+                value={filterText}
+                placeholder="Search..."
+                onChange={(e) => { onFilterTextChange(e.target.value) }}
+                className="form-control mb-1"
+            />
+            <label>
                 <input
-                    type="text"
-                    value={filterText}
-                    placeholder="Search..."
-                    onChange={(e) => { onFilterTextChange(e.target.value) }}
+                    type="checkbox"
+                    checked={inStockOnly}
+                    onChange={(e) => onInStockOnlyChange(e.target.checked)}
+                    className="form-check-input mt-1"
                 />
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={inStockOnly}
-                        onChange={(e) => onInStockOnlyChange(e.target.checked)}
-                    />
-                    {' '}
-                    Only show products in stock
-                </label>
-            </form>
-        </div>
+                {' '}Only show products in stock
+            </label>
+        </form>
     );
 }
 
 function FilterProductTable({ products }) {
     const [filterText, setFilterText] = useState('');
-    const [inStockOnly, setInStockOnly] = useState(false);
+    const [inStockOnly, setInStockOnly] = useState(true);
     return (
-        <div className="container d-flex justify-content-center">
-            <div className="grid">
+        <div className="container d-flex justify-content-center flex-wrap min-width">
+            <div className="d-flex flex-column shadow rounded-2 w-50">
                 <SearchBar
                     filterText={filterText}
                     inStockOnly={inStockOnly}
