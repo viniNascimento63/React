@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function ProductCategoryRow({ category }) {
     return (
-        <tr>
+        <tr className="product-category text-center">
             <th colSpan="2">
                 {category}
             </th>
@@ -17,9 +17,9 @@ function ProductRow({ product }) {
         </span>;
 
     return (
-        <tr>
-            <td>{name}</td>
-            <td>{product.price}</td>
+        <tr className="product">
+            <td className="text-start">{name}</td>
+            <td className="text-end">{product.price}</td>
         </tr>
     );
 }
@@ -65,11 +65,11 @@ function ProductTable({ products, filterText, inStockOnly }) {
 
     return (
         <div className="container">
-            <table className="w-100">
+            <table className="table w-100">
                 <thead>
-                    <tr>
-                        <th>NAME</th>
-                        <th>PRICE</th>
+                    <tr className="">
+                        <th className="text-start">NAME</th>
+                        <th className="text-end">PRICE</th>
                     </tr>
                 </thead>
                 <tbody>{rows}</tbody>
