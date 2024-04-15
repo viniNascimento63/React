@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function ProductCategoryRow({ category }) {
     return (
-        <tr className="product-category text-center">
+        <tr className="product-category text-center table-active">
             <th colSpan="2">
                 {category}
             </th>
@@ -12,14 +12,19 @@ function ProductCategoryRow({ category }) {
 
 function ProductRow({ product }) {
     const name = product.stocked ? product.name :
-        <span style={{ color: 'red' }}>
+        <span className="text-danger text-decoration-line-through">
             {product.name}
         </span>;
+    
+    const price = product.stocked ? product.price :
+        <span className="text-danger text-decoration-line-through">
+            {product.price}
+        </span>
 
     return (
         <tr className="product">
             <td className="text-start">{name}</td>
-            <td className="text-end">{product.price}</td>
+            <td className="text-end">{price}</td>
         </tr>
     );
 }
@@ -85,7 +90,7 @@ function SearchBar({
     onInStockOnlyChange
 }) {
     return (
-        <form className="">
+        <form>
             <input
                 type="text"
                 value={filterText}
@@ -93,7 +98,7 @@ function SearchBar({
                 onChange={(e) => { onFilterTextChange(e.target.value) }}
                 className="form-control"
             />
-            <label>
+            <label className="py-2 fst-italic">
                 <input
                     type="checkbox"
                     checked={inStockOnly}
@@ -125,12 +130,12 @@ function FilterProductTable({ products }) {
 }
 
 const PRODUCTS = [
-    { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
-    { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
-    { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
-    { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
-    { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
-    { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+    { category: "Fruits", price: "R$ 1,00", stocked: true, name: "Apple" },
+    { category: "Fruits", price: "R$ 1,00", stocked: true, name: "Dragonfruit" },
+    { category: "Fruits", price: "R$ 2,00", stocked: false, name: "Passionfruit" },
+    { category: "Vegetables", price: "R$ 2,00", stocked: true, name: "Spinach" },
+    { category: "Vegetables", price: "R$ 4,00", stocked: false, name: "Pumpkin" },
+    { category: "Vegetables", price: "R$ 1,00", stocked: true, name: "Peas" }
 ];
 
 export default function App() {
