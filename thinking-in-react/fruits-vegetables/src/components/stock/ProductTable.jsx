@@ -1,5 +1,5 @@
-import { ProductCategoryRow } from "../components/ProductCategoryRow";
-import { ProductRow } from "../components/ProductRow";
+import { ProductCategoryRow } from "./ProductCategoryRow";
+import { ProductRow } from "./ProductRow";
 
 export function ProductTable({ products, filterText, inStockOnly }) {
     const rows = [];

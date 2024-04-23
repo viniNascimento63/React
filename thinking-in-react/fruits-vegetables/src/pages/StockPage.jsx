@@ -1,4 +1,4 @@
-import { FilterProductTable } from "../components/FilterProductTable";
+import { FilterProductTable } from "../components/stock/FilterProductTable";
 import '../resources/styles/App.css';
 
 const PRODUCTS = [
