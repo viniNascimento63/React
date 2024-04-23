@@ -1,14 +1,11 @@
-// LoginPage.jsx
-import React from 'react';
+import LoginForm from "../components/login/LoginForm";
 
 function LoginPage() {
   return (
     <div>
-      <h1>Login Page</h1>
-      {/* Conteúdo da página de login */}
+      <LoginForm />
     </div>
   );
 }
 
 export default LoginPage;
-
