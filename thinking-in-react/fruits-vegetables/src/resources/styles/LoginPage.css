@@ -1,0 +1,18 @@
+/* Estilo para tamanho do formulário */
+.form-width {
+    min-width: 300px;
+}
+
+/* Estilo para diminuir o tamanho da borda de foco */
+.input-focus-none {
+    /* Tamanho da borda de foco */
+    border-width: 1px;
+}
+
+/* Estilo para remover a sombra de foco */
+.input-focus-none:focus {
+    /* Remove a sombra de foco */ 
+    box-shadow: none;
+    /* Altera a cor da borda quando ativa */
+    border-color: rgb(189, 189, 189);
+}
