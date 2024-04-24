@@ -1,5 +1,5 @@
 import { FilterProductTable } from "../components/stock/FilterProductTable";
-import '../resources/styles/App.css';
+import '../resources/styles/StockPage.css';
 
 const PRODUCTS = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
