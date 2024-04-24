@@ -1,8 +1,8 @@
-export default function LoginForm() {
+export default function SignForm() {
     return (
         <div>
             <div className="d-flex container justify-content-center">
-                <p className="h1 fw-normal text-body-tertiary">Login Page</p>
+                <p className="h1 fw-normal text-body-tertiary">Sign UP</p>
             </div>
 
             <div className="d-flex container justify-content-center">
@@ -18,12 +18,9 @@ export default function LoginForm() {
                     </div>
 
                     <div className="d-flex justify-content-between">
-                        <div>
-                            <a href="#">
-                                <p className="text-primary m-0">Esqueci a senha</p>
-                            </a>
-                            <a href="/sign">
-                                <p className="text-primary m-0">Cadatre-se</p>
+                        <div className="align-self-center">
+                            <a href="/login">
+                                <p className="text-primary m-0">Login</p>
                             </a>
                         </div>
                         <div className="align-self-center"><input type="submit" className="btn btn-primary" value="Enviar" /></div>
