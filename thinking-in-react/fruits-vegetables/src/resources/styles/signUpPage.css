@@ -1,0 +1,7 @@
+span.toggle-eye {
+    padding: 6px 9px;
+}
+
+svg.bi.bi-eye-fill, .bi.bi-eye-slash-fill {
+    vertical-align: baseline;
+}
