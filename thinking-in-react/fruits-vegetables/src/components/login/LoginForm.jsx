@@ -2,7 +2,7 @@ export default function LoginForm() {
     return (
         <div>
             <div className="d-flex container justify-content-center">
-                <p className="h1 fw-normal text-body-tertiary">Login Page</p>
+                <p className="h1 fw-normal text-body-tertiary">Login</p>
             </div>
 
             <div className="d-flex container justify-content-center">
