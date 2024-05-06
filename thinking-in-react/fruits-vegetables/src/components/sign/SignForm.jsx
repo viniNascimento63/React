@@ -22,7 +22,7 @@ export default function SignForm() {
                     <div className="mb-2">
                         <label htmlFor="pass" className="form-label mb-1">Digite sua senha:</label>
                         <div className="d-flex">
-                            <input type="password" className="form-control input-focus-none" placeholder="Senha" id="pass" />
+                            <input type="password" className="form-control input-pass input-focus-none" placeholder="Senha" id="pass" />
                             <TogglePassVisibility />
                         </div>
                     </div>

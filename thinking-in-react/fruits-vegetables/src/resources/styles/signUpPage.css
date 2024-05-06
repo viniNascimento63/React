@@ -1,5 +1,9 @@
+.input-pass {
+    border-radius: .375rem 0 0 .375rem;
+}
+
 span.toggle-eye {
-    padding: 6px 9px;
+    padding: 6px 10px;
 }
 
 svg.bi.bi-eye-fill, .bi.bi-eye-slash-fill {
